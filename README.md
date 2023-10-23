@@ -1,0 +1,2 @@
+# PracticalSession
+exercises
