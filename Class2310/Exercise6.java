@@ -4,8 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Exercise3 {
-
+public class Exercise6 {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("I need some information about you! Give me your name: ");
@@ -47,21 +46,28 @@ public class Exercise3 {
             System.out.println(address);
 
             saveUserInfo(name, age, email, phone, address);
+            yearOfBirth(age);
 
             scanner.close();
 
         }
-
-        public static void saveUserInfo(String name, int age, String email, String phone, String address) {
-            try (FileWriter writer = new FileWriter("org/example/Class2310/userData.text")) {
-                writer.write("Name: " + name + System.lineSeparator());
-                writer.write("age: " + age + System.lineSeparator());
-                writer.write("phone number: " + phone + System.lineSeparator());
-                writer.write("email: " + email + System.lineSeparator());
-                writer.write("address: " + address + System.lineSeparator());
+        public static void saveUserInfo(String name, int age, String email, String phone, String address){
+            try(FileWriter writer = new FileWriter("Class6/userData.text")){
+                writer.write("Name: " + name+ System.lineSeparator());
+                writer.write("age: " + age +System.lineSeparator());
+                writer.write("phone number: " + phone+ System.lineSeparator());
+                writer.write("email: " + email +  System.lineSeparator());
+                writer.write("address: " + address +  System.lineSeparator());
             } catch (IOException e) {
                 System.out.println("error occurred while writing");
             }
         }
-
+        public static int yearOfBirth(int age){
+            int yearBirth;
+            yearBirth= 2023- age;
+            System.out.println("a year of bith " + yearBirth );
+            return yearBirth;
+        }
 }
+
+
