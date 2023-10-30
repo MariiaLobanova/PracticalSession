@@ -3,8 +3,6 @@ package org.example.Class2410;
 import java.io.*;
 import java.util.Scanner;
 
-// Implement a feature that allows the user to specify the name of the
-//file where their data will be stored and read from.
 public class E5 {
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
